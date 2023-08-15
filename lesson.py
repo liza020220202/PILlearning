@@ -29,6 +29,13 @@ def grey():
     im.save('grey.png')
 
 
+def sentence():
+    im.paste(im_sentence, (0, 0, x, y))
+    im.save('pasting.png')
+
+
 if __name__ == '__main__':
     im = Image.open('vulkanturizmkamchatka.jpg')
-    grey()
+    im_sentence = Image.open('python.jpg')
+    x, y = im_sentence.size
+    sentence()
