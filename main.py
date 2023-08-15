@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageFilter
 
 
 def f():
@@ -6,5 +6,5 @@ def f():
     im.show()
 
 
-if __name__ == '__lesson__':
+if __name__ == '__main__':
     f()
