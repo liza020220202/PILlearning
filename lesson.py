@@ -18,7 +18,17 @@ def rotating(x):
     im3.save('rotating.jpg')
 
 
+def grey():
+    pixels = im.load()
+    x, y = im.size
+    for i in range(x):
+        for j in range(y):
+            r, g, b = pixels[i, j]
+            gre = (r + g + b) // 3
+            pixels[i, j] = gre, gre, gre
+    im.save('grey.png')
+
+
 if __name__ == '__main__':
     im = Image.open('vulkanturizmkamchatka.jpg')
-    x = int(input())
-    rotating(x)
+    grey()
