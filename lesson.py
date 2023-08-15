@@ -13,6 +13,12 @@ def cropping():
     reg.save('cropping.png', 'PNG')
 
 
+def rotating(x):
+    im3 = im.rotate(x)
+    im3.save('rotating.jpg')
+
+
 if __name__ == '__main__':
     im = Image.open('vulkanturizmkamchatka.jpg')
-    cropping()
+    x = int(input())
+    rotating(x)
